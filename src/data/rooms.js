@@ -2,7 +2,7 @@ import room1 from '../assets/SSD_0001.JPG';
 import room2 from '../assets/SSD_9938.JPG';
 import room3 from '../assets/SSD_9956.JPG';
 import room4 from '../assets/IMG20250822122156.jpg';
-import room6 from '../assets/SSD_9960-1.jpg';
+import room6 from '../assets/SSD_9960-1.JPG';
 
 // Import new WhatsApp images (sampling some for specific rooms)
 import wa1 from '../assets/WhatsApp Image 2026-03-20 at 4.42.06 PM.jpeg';
