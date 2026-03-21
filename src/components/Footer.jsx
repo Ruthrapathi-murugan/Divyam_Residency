@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, ArrowUpRight, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
           {/* Logo & Vision */}
           <div className="md:col-span-12 lg:col-span-4">
-            <motion.div 
+            <Motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -29,8 +29,8 @@ const Footer = () => {
                 <h4 className="text-2xl font-black text-white tracking-tighter leading-none">DHIVYAM</h4>
                 <p className="text-xs font-bold text-gold-500 tracking-[0.4em] mt-1 uppercase">Residency</p>
               </div>
-            </motion.div>
-            <motion.p 
+            </Motion.div>
+            <Motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -38,17 +38,17 @@ const Footer = () => {
               className="text-slate-400 leading-relaxed mb-10 max-w-sm text-lg font-light"
             >
               Where every stay becomes a divine memory. Experience the perfect harmony of soul and comfort in the heart of Palani.
-            </motion.p>
+            </Motion.p>
             <div className="flex space-x-6">
               {[Facebook, Instagram, Twitter].map((Icon, i) => (
-                <motion.a 
+                <Motion.a 
                   key={i}
                   href="#"
                   whileHover={{ y: -5, color: '#f59e0b' }}
                   className="text-slate-500 transition-colors"
                 >
                   <Icon size={24} strokeWidth={1.5} />
-                </motion.a>
+                </Motion.a>
               ))}
             </div>
           </div>
@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Nav groups */}
           <div className="md:col-span-12 lg:col-span-8">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -79,9 +79,9 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </Motion.div>
 
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -110,9 +110,9 @@ const Footer = () => {
                     <span className="text-sm group-hover:text-white transition-colors">dhivyamresidency@gmail.com</span>
                   </li>
                 </ul>
-              </motion.div>
+              </Motion.div>
 
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -131,7 +131,7 @@ const Footer = () => {
                     <ArrowUpRight size={20} />
                   </button>
                 </div>
-              </motion.div>
+              </Motion.div>
             </div>
           </div>
         </div>

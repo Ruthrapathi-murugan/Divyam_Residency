@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -7,13 +7,13 @@ const Contact = () => {
     <div className="pt-40 pb-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <motion.h1 
+          <Motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-4"
           >
             GET IN <span className="text-gold-500 underline decoration-slate-200">TOUCH</span>
-          </motion.h1>
+          </Motion.h1>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
             Have questions about your stay or want to book a special event? 
             Our divine team is ready to assist you 24/7.
@@ -22,7 +22,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
@@ -52,11 +52,11 @@ const Contact = () => {
                 Send Message <Send size={18} className="ml-3" />
               </button>
             </form>
-          </motion.div>
+          </Motion.div>
 
           {/* Contact Details & Map */}
           <div className="space-y-12">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
@@ -76,10 +76,10 @@ const Contact = () => {
                 <h3 className="text-xl font-black text-slate-900 mb-2">Email Us</h3>
                 <p className="text-slate-500 font-medium">dhivyamresidency@gmail.com</p>
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Map Container */}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -94,7 +94,7 @@ const Contact = () => {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </div>

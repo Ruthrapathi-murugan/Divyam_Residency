@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Users, BedDouble, Star, ChevronRight } from 'lucide-react';
 import { roomsData } from '../data/rooms';
 import RoomDetailsModal from './RoomDetailsModal';
@@ -24,15 +24,15 @@ const Rooms = ({ onGlobalBookNow }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div className="max-w-xl">
-            <motion.h2 
+            <Motion.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="text-gold-600 font-bold uppercase tracking-[0.3em] text-xs mb-4"
             >
               Accommodation
-            </motion.h2>
-            <motion.h3 
+            </Motion.h2>
+            <Motion.h3 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -40,16 +40,16 @@ const Rooms = ({ onGlobalBookNow }) => {
               className="text-5xl font-black text-slate-900 tracking-tight"
             >
               Discover Your <span className="italic font-light">Sanctuary</span>
-            </motion.h3>
+            </Motion.h3>
           </div>
-          <motion.p className="mt-6 md:mt-0 text-slate-500 max-w-sm text-sm">
+          <Motion.p className="mt-6 md:mt-0 text-slate-500 max-w-sm text-sm">
             Experience Palani's most comfortable stay with our re-categorized rooms designed for your every need.
-          </motion.p>
+          </Motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {roomsData.map((room, index) => (
-            <motion.div
+            <Motion.div
               key={room.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ const Rooms = ({ onGlobalBookNow }) => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

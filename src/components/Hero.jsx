@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { Star, ArrowRight, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import hero1 from '../assets/SSD_0001.JPG';
-import hero2 from '../assets/SSD_0005.JPG';
-import hero3 from '../assets/SSD_9938.JPG';
-import hero4 from '../assets/IMG20250822122156.jpg';
+import hero1 from '../assets/2bed2.PNG';
+import hero2 from '../assets/4bed4.PNG';
+import hero3 from '../assets/2bed6.PNG';
+import hero4 from '../assets/2bed5.PNG';
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
