@@ -5,10 +5,16 @@ import { ArrowRight } from 'lucide-react';
 
 import { roomsData } from '../data/rooms';
 
-const assetModules = import.meta.glob('../assets/*.{png,jpg,jpeg,PNG,JPG,JPEG}', {
-  eager: true,
-  import: 'default',
-});
+const assetModules = import.meta.glob(
+  [
+    '../assets/*.{png,jpg,jpeg,PNG,JPG,JPEG}',
+    '!../assets/WhatsApp Image *.{png,jpg,jpeg,PNG,JPG,JPEG}',
+  ],
+  {
+    eager: true,
+    import: 'default',
+  }
+);
 
 const Gallery = ({ isFullPage = false }) => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -26,6 +32,12 @@ const Gallery = ({ isFullPage = false }) => {
         .trim();
     };
 
+    const isWhatsAppAsset = (path) => {
+      const normalizedPath = String(path).replace(/\\/g, '/');
+      const filename = normalizedPath.split('/').pop() ?? normalizedPath;
+      return filename.startsWith('WhatsApp Image ');
+    };
+
     roomsData.forEach((room) => {
       const roomImages = [room.image, ...(room.gallery ?? [])].filter(Boolean);
 
@@ -41,7 +53,7 @@ const Gallery = ({ isFullPage = false }) => {
     });
 
     Object.entries(assetModules).forEach(([path, src]) => {
-      if (!src || imageMap.has(src)) return;
+      if (!src || imageMap.has(src) || isWhatsAppAsset(path)) return;
 
       imageMap.set(src, {
         src,

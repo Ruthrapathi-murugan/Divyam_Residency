@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
-import { X, Phone, CheckCircle2, Star, Calculator, Gift } from 'lucide-react';
+import { X, Phone, Star, Gift } from 'lucide-react';
 import logo from '../assets/logo.jpg';
 
 const BookingModal = ({ isOpen, onClose, roomName }) => {
   const platforms = [
-    { name: 'Agoda', url: 'https://www.agoda.com', color: 'bg-indigo-600' },
-    { name: 'Booking.com', url: 'https://www.booking.com', color: 'bg-blue-800' },
+    { name: 'Agoda', url: 'https://www.agoda.com/en-in/dhivyam-residency-h71069674/hotel/palani-in.html', color: 'bg-indigo-600' },
+    { name: 'Booking.com', url: 'https://www.booking.com/hotel/in/dhivyam-residency.html', color: 'bg-blue-800' },
     { name: 'MakeMyTrip', url: 'https://www.makemytrip.com', color: 'bg-red-600' },
     { name: 'Goibibo', url: 'https://www.goibibo.com', color: 'bg-orange-500' },
+    { name: 'EaseMyTrip', url: 'https://www.easemytrip.com/hotels/dhivyam-residency-8484560/', color: 'bg-emerald-600' },
   ];
 
   return (
@@ -54,14 +55,16 @@ const BookingModal = ({ isOpen, onClose, roomName }) => {
             <div className="p-8">
               <div className="space-y-4 mb-8">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Choose Platform</p>
-                <div className="grid grid-cols-2 gap-4">
-                  {platforms.map((p) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {platforms.map((p, index) => (
                     <a
                       key={p.name}
                       href={p.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center justify-center py-4 rounded-2xl text-white font-bold text-sm transition-all hover:scale-105 ${p.color}`}
+                      className={`flex items-center justify-center py-4 rounded-2xl text-white font-bold text-sm transition-all hover:scale-105 ${
+                        platforms.length % 2 === 1 && index === platforms.length - 1 ? 'sm:col-span-2' : ''
+                      } ${p.color}`}
                     >
                       {p.name}
                     </a>
