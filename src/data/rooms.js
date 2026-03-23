@@ -44,7 +44,7 @@ export const roomsData = [
   {
     id: 3,
     name: '3 Bed - Non AC Room',
-    price: '2300',
+    price: '2000',
     category: 'Non-AC',
     image: bed3Main,
     gallery: [bed3Main, bed3Alt1, bed3Alt2],
@@ -55,7 +55,7 @@ export const roomsData = [
   {
     id: 4,
     name: '4 Bed - AC Room',
-    price: '3500',
+    price: '3000',
     category: 'AC',
     image: bed4Alt5,
     gallery: [bed4Alt5, bed4Main, bed4Alt1, bed4Alt2, room6],
@@ -66,7 +66,7 @@ export const roomsData = [
   {
     id: 5,
     name: '4 Bed - Non AC Room',
-    price: '2800',
+    price: '2500',
     category: 'Non-AC',
     image: bed4Alt3,
     gallery: [bed4Alt3, bed4Alt4, bed4Main, bed4Alt1, room1],
